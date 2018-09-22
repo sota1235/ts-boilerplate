@@ -14,6 +14,8 @@ See `scripts` in `package.json`.
 ### Install
 
 ```
+git clone git@github.com:sota1235/ts-boilerplate.git your_app_name
+cd your_app_name
 npm i
 ```
 
