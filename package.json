@@ -1,7 +1,7 @@
 {
   "name": "ts-boilerplate",
-  "version": "1.0.0",
-  "description": "ts-boilerplate ====",
+  "version": "0.0.1",
+  "description": "Simple boilerplate for @sota1235",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -17,9 +17,25 @@
     "tslint-config-prettier": "^1.15.0"
   },
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "fix": "prettier --write ./src/**/*.ts",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint": "npm run fix && npm run tslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "@sota1235",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "git add"
+    ]
+  }
 }
