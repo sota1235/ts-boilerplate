@@ -13,9 +13,12 @@
     "typescript": "^3.0.3"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.5",
     "husky": "^1.0.0-rc.15",
+    "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
+    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0"
   },
@@ -25,7 +28,7 @@
     "fix": "prettier --write ./src/**/*.ts",
     "tslint": "tslint -c tslint.json 'src/**/*.ts'",
     "lint": "npm run fix && npm run tslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "@sota1235",
