@@ -1,7 +1,6 @@
+import { sayGoodBye, sayHello } from './greetings';
+
 const worldName: string = 'World';
 
-function sayHello(name: string): void {
-  console.log(`Hello, ${name}`);
-}
-
-sayHello(worldName);
+console.log(sayHello(worldName));
+console.log(sayGoodBye(worldName));
