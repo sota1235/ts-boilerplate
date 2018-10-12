@@ -1,4 +1,4 @@
-ts-boilerplate
+ts-boilerplate [![CircleCI](https://circleci.com/gh/sota1235/ts-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/sota1235/ts-boilerplate/tree/master)
 ====
 
 Minimum boilerplate for me.
