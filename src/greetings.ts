@@ -3,5 +3,5 @@ export function sayHello(name: string): string {
 }
 
 export function sayGoodBye(name: string): string {
-  return `GoodBye ${name}`;
+  return `GoodBye, ${name}`;
 }
