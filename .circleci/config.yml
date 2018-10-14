@@ -22,18 +22,18 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-        name: test
-        command: |
-          npm run test:ci
-          npx codecov@3.0.2
+          name: test
+          command: |
+            npm run test:ci
+            npx codecov@3.0.2
 
       - run:
-        name: lint
-        command: npm run lint
+          name: lint
+          command: npm run lint
 
       - run:
-        name: build
-        command: npm run build
+          name: build
+          command: npm run build
 
 workflows:
   version: 2
