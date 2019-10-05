@@ -5,7 +5,7 @@ Minimum boilerplate for me.
 
 ### Requirement
 
-- Node.js v10
+- Node.js v12.10.0~
 
 ### Usage
 
