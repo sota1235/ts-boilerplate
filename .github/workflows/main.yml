@@ -24,5 +24,3 @@ jobs:
           npx codecov@3.0.2
           npm run lint
           npm run build
-        env:
-          CI: true
