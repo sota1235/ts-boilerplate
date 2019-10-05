@@ -19,14 +19,18 @@
     "husky": "3.0.8",
     "jest": "24.9.0",
     "lint-staged": "9.4.1",
+    "nodemon": "^1.19.3",
     "prettier": "1.18.2",
     "ts-jest": "24.1.0",
+    "ts-node": "^8.4.1",
     "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0"
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
+    "watch": "nodemon",
+    "start:dev": "ts-node src/index.ts",
+    "start:prod": "node lib/index.js",
     "fix": "prettier --write ./src/**/*.ts",
     "tslint": "tslint -c tslint.json 'src/**/*.ts'",
     "lint": "npm run fix && npm run tslint",
@@ -46,5 +50,10 @@
       "npm run lint",
       "git add"
     ]
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "npm run start:dev"
   }
 }
