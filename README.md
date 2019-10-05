@@ -1,4 +1,4 @@
-ts-boilerplate [![CircleCI](https://circleci.com/gh/sota1235/ts-backend-boilerplate.svg?style=svg)](https://circleci.com/gh/sota1235/ts-backend-boilerplate) [![codecov](https://codecov.io/gh/sota1235/ts-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/sota1235/ts-boilerplate)
+ts-boilerplate [![CircleCI](https://circleci.com/gh/sota1235/ts-backend-boilerplate.svg?style=svg)](https://circleci.com/gh/sota1235/ts-backend-boilerplate) ![](https://github.com/sota1235/ts-backend-boilerplate/workflows/.github/workflows/main.yml/badge.svg) [![codecov](https://codecov.io/gh/sota1235/ts-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/sota1235/ts-boilerplate)
 ====
 
 Minimum boilerplate for me.
