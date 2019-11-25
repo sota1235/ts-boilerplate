@@ -19,6 +19,12 @@ cd your_app_name
 npm i
 ```
 
+### Environment Values
+
+| Key  |For what              |
+|:----:|:--------------------:|
+|`PORT`|Port number for server|
+
 ### Optional
 
 - CircleCI
