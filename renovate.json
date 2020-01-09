@@ -1,5 +1,28 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "schedule:weekends"
+  ],
+  "timezone": "JP",
+  "packageRules": [
+    {
+      "groupName": "@types packages",
+      "updateTypes": ["minor", "patch"],
+      "automerge": true,
+      "schedule": ["at any time"]
+    },
+    {
+      "groupName": "devDependencies",
+      "updateTypes": ["minor", "patch"],
+      "automerge": true,
+      "schedule": ["at any time"]
+    },
+    {
+      "groupName": "auto merge only for patch version",
+      "depTypeList": ["dependencies"],
+      "updateTypes": ["patch"],
+      "automerge": true,
+      "schedule": ["at any time"]
+    }
   ]
 }
