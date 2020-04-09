@@ -15,6 +15,7 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
+    "@stoplight/spectral": "^5.3.0",
     "@types/express": "4.17.4",
     "@types/jest": "25.2.1",
     "@types/morgan": "1.9.0",
@@ -28,6 +29,7 @@
     "lint-staged": "10.1.2",
     "nodemon": "2.0.2",
     "prettier": "2.0.4",
+    "redoc-cli": "^0.9.7",
     "ts-jest": "25.3.1",
     "ts-node": "8.8.2"
   },
@@ -36,6 +38,9 @@
     "watch": "nodemon",
     "start:dev": "ts-node src/index.ts",
     "start:prod": "node lib/index.js",
+    "doc:dev": "redoc-cli serve ./spec.yml",
+    "doc:build": "redoc-cli bundle ./spec.yml",
+    "doc:lint": "spectral lint ./spec.yml",
     "fix": "npm run prettier && npm run eslint:fix",
     "lint": "npm run eslint",
     "eslint": "eslint 'src/**/*.ts'",
