@@ -1,0 +1,71 @@
+openapi: 3.0.1
+info:
+  title: sample-api
+  description: |
+    Sample spec file. <br />
+    <br />
+    ## Header
+    * `Accept`
+      * format
+          `application/sample-api.{version}+json`
+      * variable
+          `version` - integer number
+  version: '1'
+servers:
+  - url: https://sota1235.com
+tags:
+  - name: users
+    description: |
+      Data of customer.
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Getting all user list.
+      description: Endpoint to get all user data.
+      operationId: getUserList
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/user'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  responses:
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+  schemas:
+    user:
+      type: object
+      required:
+        - userId
+        - userName
+      properties:
+        userId:
+          type: number
+          description: User ID.
+        userName:
+          type: string
+          description: User name.
+    error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+        message:
+          description: Message to show for user.
+          type: string
