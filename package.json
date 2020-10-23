@@ -30,7 +30,7 @@
     "nodemon": "2.0.6",
     "prettier": "2.1.2",
     "redoc-cli": "^0.9.7",
-    "ts-jest": "26.4.1",
+    "ts-jest": "26.4.2",
     "ts-node": "9.0.0"
   },
   "scripts": {
